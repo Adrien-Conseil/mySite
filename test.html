@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adrien Conseil — Page test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-brand">Adrien Conseil</a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#profil" class="nav-link">Profil</a>
+        <a href="index.html#missions" class="nav-link">Missions</a>
+        <a href="index.html#competences" class="nav-link">Compétences</a>
+        <a href="test.html" class="nav-link active">Test</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Changer de thème"
+      >
+        <span class="theme-toggle-dot"></span>
+        <span class="theme-toggle-text">Mode clair</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero hero-test">
+      <div class="container hero-inner">
+        <p class="eyebrow">Laboratoire visuel</p>
+        <h1>Page de test</h1>
+        <p class="hero-subtitle">
+          Itérations visuelles et composants expérimentaux
+        </p>
+        <p class="hero-text">
+          Cette page sert à tester les évolutions d’interface avant intégration
+          sur la page principale : frise retravaillée, développement du bloc AMO,
+          présentation plus graphique des systèmes et des protocoles.
+        </p>
+
+        <div class="hero-actions">
+          <a href="index.html" class="btn">Retour à l’accueil</a>
+          <a href="#frise-test" class="btn btn-secondary">Voir les tests</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="frise-test" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Test 01</p>
+          <h2>Frise missions — version recentrée</h2>
+          <p class="section-intro">
+            Les index sont ici centrés verticalement par rapport à chaque carte,
+            pour obtenir une lecture plus équilibrée.
+          </p>
+        </div>
+
+        <div class="timeline-v2">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">01</div>
+            <div class="timeline-card-v2">
+              <h3>Étude et analyse</h3>
+              <p>
+                Lecture de CCTP, analyse des besoins, compréhension de l’environnement
+                technique et prise en compte des contraintes liées aux autres corps d’état,
+                aussi bien en tertiaire qu’en résidentiel.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">02</div>
+            <div class="timeline-card-v2">
+              <h3>Définition des solutions</h3>
+              <p>
+                Choix et structuration des solutions techniques selon le contexte du projet,
+                les interfaces nécessaires, les équipements à intégrer et la cohérence
+                globale attendue.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">03</div>
+            <div class="timeline-card-v2">
+              <h3>Conception et préparation</h3>
+              <p>
+                Réalisation de devis, schémas, préparation technique, câblage de tableaux
+                et anticipation des besoins d’implantation sur site.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Test 02</p>
+          <h2>Interventions complémentaires</h2>
+          <p class="section-intro">
+            Ici, le sujet “Assistance à maîtrise d’ouvrage” n’est plus un bloc isolé,
+            mais une sous-partie cohérente de ton périmètre.
+          </p>
+        </div>
+
+        <div class="cards-grid cards-grid-amo">
+          <article class="skill-card">
+            <h3>Assistance à maîtrise d’ouvrage pour bureaux d’études</h3>
+            <p>
+              Appui à la coordination des solutions retenues avec les besoins
+              d’intégration GTB, les interfaces à prévoir et les contraintes de terrain.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Coordination transverse</h3>
+            <p>
+              Prise en compte des autres corps de métiers, lisibilité des interfaces,
+              cohérence technique globale et anticipation des impacts d’intégration.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Test 03</p>
+          <h2>Systèmes et protocoles — version graphique</h2>
+          <p class="section-intro">
+            Prototype en onglets. On pourra ensuite le faire évoluer vers un vrai
+            slider plus riche si le principe te plaît.
+          </p>
+        </div>
+
+        <div class="tech-switcher">
+          <div class="tech-tabs" role="tablist" aria-label="Catégories techniques">
+            <button class="tech-tab active" data-target="slide-systemes" type="button">
+              Systèmes
+            </button>
+            <button class="tech-tab" data-target="slide-protocoles" type="button">
+              Protocoles
+            </button>
+          </div>
+
+          <div class="tech-panels">
+            <article class="tech-panel active" id="slide-systemes">
+              <div class="tech-panel-visual">
+                <div class="logo-chip">Loxone</div>
+                <div class="logo-chip">KNX</div>
+                <div class="logo-chip">WIT</div>
+              </div>
+
+              <div class="tech-panel-copy">
+                <h3>Systèmes et environnements</h3>
+                <p>
+                  Très bonne maîtrise de l’environnement Loxone et de ses produits,
+                  bonne autonomie sur KNX avec capacité à analyser et reprendre une
+                  installation existante, et maîtrise de l’environnement WIT.
+                </p>
+                <ul class="tech-points">
+                  <li>Loxone</li>
+                  <li>KNX</li>
+                  <li>WIT</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="tech-panel" id="slide-protocoles">
+              <div class="tech-panel-visual">
+                <div class="logo-chip">Modbus</div>
+                <div class="logo-chip">BACnet</div>
+                <div class="logo-chip">LoRa</div>
+                <div class="logo-chip">IP / NAT</div>
+              </div>
+
+              <div class="tech-panel-copy">
+                <h3>Protocoles et communication</h3>
+                <p>
+                  Bonne compréhension des échanges entre équipements communicants et
+                  des bases réseau utiles à l’intégration, à la mise en service et
+                  au diagnostic.
+                </p>
+                <ul class="tech-points">
+                  <li>Modbus RTU / TCP</li>
+                  <li>BACnet</li>
+                  <li>LoRa</li>
+                  <li>Réseau IP, masques, sous-réseaux, NAT</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-text">
+        <h2>Page test</h2>
+        <p>Zone d’essai avant intégration sur la home principale</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Retour à l’accueil</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+    const toggleText = document.querySelector(".theme-toggle-text");
+
+    function applyTheme(theme) {
+      body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      toggleText.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme("dark");
+    }
+
+    toggle.addEventListener("click", () => {
+      const currentTheme = body.getAttribute("data-theme");
+      applyTheme(currentTheme === "dark" ? "light" : "dark");
+    });
+
+    const tabs = document.querySelectorAll(".tech-tab");
+    const panels = document.querySelectorAll(".tech-panel");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach((item) => item.classList.remove("active"));
+        panels.forEach((panel) => panel.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
