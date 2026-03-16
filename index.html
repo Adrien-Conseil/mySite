@@ -3,48 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ma page d'accueil</title>
+  <title>Adrien Conseil — Intégrateur GTB, domotique et systèmes communicants</title>
+  <meta
+    name="description"
+    content="Adrien Conseil — Intégrateur GTB, domotique et systèmes communicants. Étude, coordination technique, programmation, mise en service et documentation."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-theme="dark">
   <header class="site-header">
-    <h1>Mon site vitrine</h1>
-    <nav class="main-nav">
-      <a href="index.html" class="nav-link active">
-        <span class="nav-icon"></span>
-        Accueil
-      </a>
-      <a href="services.html" class="nav-link">
-        <span class="nav-icon"></span>
-        Services
-      </a>
-      <a href="contact.html" class="nav-link">
-        <span class="nav-icon"></span>
-        Contact
-      </a>
-    </nav>
+    <div class="container header-inner">
+      <a href="#top" class="site-brand">Adrien Conseil</a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#profil" class="nav-link active">Profil</a>
+        <a href="#missions" class="nav-link">Missions</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Changer de thème"
+      >
+        <span class="theme-toggle-dot"></span>
+        <span class="theme-toggle-text">Mode clair</span>
+      </button>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Bienvenue</h2>
-      <p>
-        Ceci est une base très simple pour démarrer un site vitrine.
-        Tu pourras ensuite remplacer ce texte par ton vrai contenu.
-      </p>
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-inner">
+        <p class="eyebrow">Profil technique • GTB • Domotique • Systèmes communicants</p>
 
-      <div class="actions">
-        <a href="services.html" class="btn">Voir les services</a>
-        <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
+        <h1>Adrien Conseil</h1>
+
+        <p class="hero-subtitle">
+          Intégrateur GTB, domotique et systèmes communicants
+        </p>
+
+        <p class="hero-text">
+          Intégrateur GTB, domotique et systèmes communicants, avec une expérience
+          couvrant l’étude, la coordination technique, la programmation, la mise
+          en service et la documentation. J’évolue avec une approche à la fois
+          terrain et structurée, orientée qualité d’intégration, cohérence
+          technique et compréhension des besoins. Ouvert aux échanges autour
+          d’opportunités, de collaborations et de projets ponctuels.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#profil" class="btn">Découvrir mon profil</a>
+          <a href="#missions" class="btn btn-secondary">Voir mes missions</a>
+        </div>
       </div>
     </section>
 
-    <section class="card">
-      <h3>Section exemple</h3>
-      <p>
-        Site en cours de construction
-      </p>
+    <section id="profil" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Profil</p>
+          <h2>Un profil technique polyvalent, de l’étude à la mise en service</h2>
+        </div>
+
+        <div class="content-card">
+          <p>
+            J’interviens sur des projets de GTB, de domotique et d’intégration de
+            systèmes communicants, aussi bien sur les phases de préparation que sur
+            les phases d’exécution.
+          </p>
+
+          <p>
+            Mon parcours m’a amené à travailler sur des sujets mêlant lecture de
+            CCTP, définition de solutions, coordination technique, programmation,
+            mise en service, intégration d’équipements et documentation.
+          </p>
+
+          <p>
+            Je m’appuie sur une bonne autonomie, une forte rigueur technique et une
+            attention particulière portée à la qualité d’intégration ainsi qu’à la
+            cohérence d’ensemble des installations.
+          </p>
+
+          <p>
+            Expérience récente chez Odomotiq sur des projets d’intégration GTB et
+            domotique, de l’étude à la mise en service.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="missions" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Missions réalisables</p>
+          <h2>Ce que je peux prendre en charge</h2>
+          <p class="section-intro">
+            Cette section a vocation à évoluer ensuite vers une vraie frise sticky
+            plus graphique.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-step">01</div>
+            <div class="timeline-content">
+              <h3>Étude et analyse</h3>
+              <p>
+                Lecture de CCTP, analyse des besoins, compréhension de
+                l’environnement technique et prise en compte des contraintes liées
+                aux autres corps d’état, aussi bien en tertiaire qu’en résidentiel.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-step">02</div>
+            <div class="timeline-content">
+              <h3>Définition des solutions</h3>
+              <p>
+                Choix et structuration des solutions techniques selon le contexte du
+                projet, les interfaces nécessaires, les équipements à intégrer et la
+                cohérence globale attendue.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-step">03</div>
+            <div class="timeline-content">
+              <h3>Conception et préparation</h3>
+              <p>
+                Réalisation de devis, schémas, préparation technique, câblage de
+                tableaux et anticipation des besoins d’implantation sur site.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-step">04</div>
+            <div class="timeline-content">
+              <h3>Coordination et déploiement</h3>
+              <p>
+                Implantation, coordination avec les autres intervenants, suivi de la
+                mise en place des équipements et préparation des différentes
+                interfaces nécessaires à l’intégration.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-step">05</div>
+            <div class="timeline-content">
+              <h3>Programmation et mise en service</h3>
+              <p>
+                Programmation, reprise d’existant, intégration des équipements
+                communicants, tests, ajustements et mise en service des différentes
+                parties du système.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-step">06</div>
+            <div class="timeline-content">
+              <h3>Finalisation et documentation</h3>
+              <p>
+                Production de documentation technique, DOE, manuels utilisateurs et
+                éléments nécessaires à une exploitation claire et pérenne de
+                l’installation.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="highlight-card">
+          <h3>Assistance à maîtrise d’ouvrage pour bureaux d’études</h3>
+          <p>
+            Appui à la coordination des solutions retenues avec les besoins
+            d’intégration GTB et les contraintes de terrain.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="competences" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Compétences techniques</p>
+          <h2>Systèmes, environnements et protocoles</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="skill-card">
+            <h3>Systèmes et environnements</h3>
+
+            <ul class="tag-list">
+              <li>Loxone</li>
+              <li>KNX</li>
+              <li>WIT</li>
+            </ul>
+
+            <p>
+              Très bonne maîtrise de l’environnement Loxone et de ses produits,
+              bonne autonomie sur KNX avec capacité à analyser et reprendre une
+              installation existante, et maîtrise de l’environnement WIT.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Protocoles et communication</h3>
+
+            <ul class="tag-list">
+              <li>Modbus RTU / TCP</li>
+              <li>BACnet</li>
+              <li>LoRa</li>
+              <li>Réseau IP</li>
+              <li>Masques</li>
+              <li>Sous-réseaux</li>
+              <li>NAT</li>
+            </ul>
+
+            <p>
+              Bonne compréhension des échanges entre équipements communicants et des
+              bases réseau utiles à l’intégration, à la mise en service et au
+              diagnostic.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-text">
+        <h2>Adrien Conseil</h2>
+        <p>Intégrateur GTB, domotique et systèmes communicants</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:ton-email@example.com">Email</a>
+        <a href="tel:+33000000000">Téléphone</a>
+        <span>Ville, Département</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+    const toggleText = document.querySelector(".theme-toggle-text");
+
+    function applyTheme(theme) {
+      body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      toggleText.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme("dark");
+    }
+
+    toggle.addEventListener("click", () => {
+      const currentTheme = body.getAttribute("data-theme");
+      applyTheme(currentTheme === "dark" ? "light" : "dark");
+    });
+  </script>
 </body>
 </html>
