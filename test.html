@@ -153,28 +153,86 @@
             </button>
           </div>
 
-          <div class="tech-panels">
-            <article class="tech-panel active" id="slide-systemes">
-              <div class="tech-panel-visual">
-                <div class="logo-chip">Loxone</div>
-                <div class="logo-chip">KNX</div>
-                <div class="logo-chip">WIT</div>
-              </div>
+<article class="tech-panel active" id="slide-systemes">
+  <div class="system-switcher">
+    <div class="system-buttons" role="tablist" aria-label="Sélection d’un système">
+      <button class="system-button active" type="button" data-system="loxone">
+        Loxone
+      </button>
+      <button class="system-button" type="button" data-system="knx">
+        KNX
+      </button>
+      <button class="system-button" type="button" data-system="wit">
+        WIT
+      </button>
+    </div>
 
-              <div class="tech-panel-copy">
-                <h3>Systèmes et environnements</h3>
-                <p>
-                  Très bonne maîtrise de l’environnement Loxone et de ses produits,
-                  bonne autonomie sur KNX avec capacité à analyser et reprendre une
-                  installation existante, et maîtrise de l’environnement WIT.
-                </p>
-                <ul class="tech-points">
-                  <li>Loxone</li>
-                  <li>KNX</li>
-                  <li>WIT</li>
-                </ul>
-              </div>
-            </article>
+    <div class="system-display">
+      <div class="system-visual">
+        <div class="system-card active" id="system-loxone">
+          <div class="system-logo-stage loxone-stage">
+            <div class="brand-logo-text">LOXONE</div>
+          </div>
+        </div>
+
+        <div class="system-card" id="system-knx">
+          <div class="system-logo-stage knx-stage">
+            <div class="brand-logo-text">KNX</div>
+          </div>
+        </div>
+
+        <div class="system-card" id="system-wit">
+          <div class="system-logo-stage wit-stage">
+            <div class="brand-logo-text">WIT</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-copy">
+        <div class="system-copy-item active" id="system-copy-loxone">
+          <h3>Loxone</h3>
+          <p>
+            Très bonne maîtrise de l’environnement Loxone et de ses produits,
+            avec une bonne connaissance de la logique de programmation, des
+            équipements et des usages associés à l’intégration domotique et GTB.
+          </p>
+          <ul class="tech-points">
+            <li>Très bonne connaissance des produits</li>
+            <li>Très bonne maîtrise de l’environnement de programmation</li>
+            <li>Approche orientée intégration, logique d’usage et cohérence d’ensemble</li>
+          </ul>
+        </div>
+
+        <div class="system-copy-item" id="system-copy-knx">
+          <h3>KNX</h3>
+          <p>
+            Bonne autonomie sur KNX, avec capacité à analyser une installation
+            existante, comprendre sa logique de fonctionnement et reprendre ou
+            ajuster une programmation déjà en place.
+          </p>
+          <ul class="tech-points">
+            <li>Analyse d’une installation existante</li>
+            <li>Reprise et adaptation de programmation</li>
+            <li>Bonne compréhension de la structure d’intégration KNX</li>
+          </ul>
+        </div>
+
+        <div class="system-copy-item" id="system-copy-wit">
+          <h3>WIT</h3>
+          <p>
+            Maîtrise de l’environnement WIT, dans une logique d’intégration
+            technique et de cohérence avec les autres systèmes communicants du projet.
+          </p>
+          <ul class="tech-points">
+            <li>Maîtrise de l’environnement WIT</li>
+            <li>Intégration dans un contexte GTB / domotique</li>
+            <li>Approche structurée et orientée exploitation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
 
             <article class="tech-panel" id="slide-protocoles">
               <div class="tech-panel-visual">
@@ -256,5 +314,24 @@
       });
     });
   </script>
+  <script>
+  const systemButtons = document.querySelectorAll(".system-button");
+  const systemCards = document.querySelectorAll(".system-card");
+  const systemCopies = document.querySelectorAll(".system-copy-item");
+
+  systemButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const system = button.dataset.system;
+
+      systemButtons.forEach((item) => item.classList.remove("active"));
+      systemCards.forEach((item) => item.classList.remove("active"));
+      systemCopies.forEach((item) => item.classList.remove("active"));
+
+      button.classList.add("active");
+      document.getElementById(`system-${system}`).classList.add("active");
+      document.getElementById(`system-copy-${system}`).classList.add("active");
+    });
+  });
+</script>
 </body>
 </html>
