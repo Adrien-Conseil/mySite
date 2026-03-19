@@ -139,8 +139,8 @@
           <p class="section-kicker">Test 03</p>
           <h2>Systèmes et protocoles — version graphique</h2>
           <p class="section-intro">
-            Prototype en onglets. L’onglet “Systèmes” permet ensuite de basculer
-            entre Loxone, KNX et WIT avec un visuel et un texte dédiés.
+            Prototype en onglets. Les sections “Systèmes” et “Protocoles”
+            utilisent la même logique de navigation et de contenu détaillé.
           </p>
         </div>
 
@@ -179,13 +179,17 @@
 
                     <div class="system-card" id="system-knx">
                       <div class="system-logo-stage knx-stage">
-                        <div class="brand-logo-text">KNX</div>
+                        <div class="brand-logo-text brand-logo-knx">KNX</div>
                       </div>
                     </div>
 
                     <div class="system-card" id="system-wit">
                       <div class="system-logo-stage wit-stage">
-                        <div class="brand-logo-text">WIT</div>
+                        <img
+                          src="https://www.wit.fr/wp-content/uploads/2021/03/LOGO_WIT_menu.png"
+                          alt="Logo WIT"
+                          class="brand-logo-image wit-logo-image"
+                        />
                       </div>
                     </div>
                   </div>
@@ -208,27 +212,42 @@
                     <div class="system-copy-item" id="system-copy-knx">
                       <h3>KNX</h3>
                       <p>
-                        Bonne autonomie sur KNX, avec capacité à analyser une installation
-                        existante, comprendre sa logique de fonctionnement et reprendre ou
-                        ajuster une programmation déjà en place.
+                        Bonne maîtrise de KNX, aussi bien pour analyser et reprendre une
+                        installation existante que pour concevoir et dimensionner une
+                        installation de zéro. Je suis à l’aise sur la programmation
+                        d’interfaces, d’actionneurs, de modules de pilotage de climatisation
+                        ou de ventilo-convecteurs, ainsi que sur l’intégration d’écrans KNX.
+                        Je sais également faire communiquer plusieurs systèmes KNX
+                        indépendants, notamment via VLAN, et intégrer des installations KNX
+                        dans des outils de supervision.
                       </p>
                       <ul class="tech-points">
-                        <li>Analyse d’une installation existante</li>
-                        <li>Reprise et adaptation de programmation</li>
-                        <li>Bonne compréhension de la structure d’intégration KNX</li>
+                        <li>Analyse et reprise d’installations existantes</li>
+                        <li>Conception et dimensionnement d’installations from scratch</li>
+                        <li>Programmation d’interfaces, d’actionneurs et d’équipements spécialisés</li>
+                        <li>Intégration de modules CVC, climatisation et ventilo-convecteurs</li>
+                        <li>Intégration d’écrans KNX</li>
+                        <li>Communication entre systèmes KNX indépendants via VLAN</li>
+                        <li>Intégration d’installations KNX dans des supervisions</li>
                       </ul>
                     </div>
 
                     <div class="system-copy-item" id="system-copy-wit">
                       <h3>WIT</h3>
                       <p>
-                        Maîtrise de l’environnement WIT, dans une logique d’intégration
-                        technique et de cohérence avec les autres systèmes communicants du projet.
+                        Maîtrise de l’environnement WIT sur la partie synoptiques, et non
+                        Synapps. Je sais mener un projet de A à Z avec une approche claire,
+                        structurée et documentée, en développant des solutions faciles à
+                        appréhender, organisées et pensées avec une vraie logique de
+                        maintenabilité.
                       </p>
                       <ul class="tech-points">
-                        <li>Maîtrise de l’environnement WIT</li>
-                        <li>Intégration dans un contexte GTB / domotique</li>
-                        <li>Approche structurée et orientée exploitation</li>
+                        <li>Pas Synapps ; donc synoptiques</li>
+                        <li>Réalisation de projets WIT de A à Z</li>
+                        <li>Organisation claire et structurée du projet</li>
+                        <li>Documentation pensée pour faciliter la prise en main</li>
+                        <li>Développement orienté maintenabilité</li>
+                        <li>Livrables lisibles, cohérents et faciles à reprendre</li>
                       </ul>
                     </div>
                   </div>
@@ -237,26 +256,120 @@
             </article>
 
             <article class="tech-panel" id="slide-protocoles">
-              <div class="tech-panel-visual">
-                <div class="logo-chip">Modbus</div>
-                <div class="logo-chip">BACnet</div>
-                <div class="logo-chip">LoRa</div>
-                <div class="logo-chip">IP / NAT</div>
-              </div>
+              <div class="protocol-switcher">
+                <div class="protocol-buttons" role="tablist" aria-label="Sélection d’un protocole">
+                  <button class="protocol-button active" type="button" data-protocol="modbus">
+                    Modbus
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="bacnet">
+                    BACnet
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="api">
+                    API
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="lora">
+                    LoRa
+                  </button>
+                </div>
 
-              <div class="tech-panel-copy">
-                <h3>Protocoles et communication</h3>
-                <p>
-                  Bonne compréhension des échanges entre équipements communicants et
-                  des bases réseau utiles à l’intégration, à la mise en service et
-                  au diagnostic.
-                </p>
-                <ul class="tech-points">
-                  <li>Modbus RTU / TCP</li>
-                  <li>BACnet</li>
-                  <li>LoRa</li>
-                  <li>Réseau IP, masques, sous-réseaux, NAT</li>
-                </ul>
+                <div class="protocol-display">
+                  <div class="protocol-visual">
+                    <div class="protocol-card active" id="protocol-modbus">
+                      <div class="protocol-logo-stage modbus-stage">
+                        <div class="brand-logo-text brand-logo-modbus">MODBUS</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-bacnet">
+                      <div class="protocol-logo-stage bacnet-stage">
+                        <div class="brand-logo-text brand-logo-bacnet">BACnet</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-api">
+                      <div class="protocol-logo-stage api-stage">
+                        <div class="brand-logo-text brand-logo-api">API</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-lora">
+                      <div class="protocol-logo-stage lora-stage">
+                        <div class="brand-logo-text brand-logo-lora">LoRa</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="protocol-copy">
+                    <div class="protocol-copy-item active" id="protocol-copy-modbus">
+                      <h3>Modbus RTU / TCP</h3>
+                      <p>
+                        Bonne maîtrise de Modbus, aussi bien en RTU qu’en TCP, pour
+                        l’intégration d’équipements variés. Je l’utilise notamment sur
+                        des produits liés au CVC, au comptage, à la production d’énergie
+                        et plus largement à l’échange de données avec des équipements
+                        communicants de terrain.
+                      </p>
+                      <ul class="tech-points">
+                        <li>Maîtrise de Modbus RTU et Modbus TCP</li>
+                        <li>Intégration d’équipements CVC</li>
+                        <li>Comptage et suivi d’énergie</li>
+                        <li>Production d’énergie et équipements communicants</li>
+                        <li>Échanges de données terrain fiables et lisibles</li>
+                      </ul>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-bacnet">
+                      <h3>BACnet</h3>
+                      <p>
+                        Utilisation de BACnet dans une logique d’interopérabilité entre
+                        automates et systèmes GTB. Je m’en suis notamment servi pour faire
+                        de l’échange de données entre deux automates GTB différents au sein
+                        d’un même bâtiment, dans une logique de cohérence fonctionnelle et
+                        de supervision partagée.
+                      </p>
+                      <ul class="tech-points">
+                        <li>Interopérabilité entre systèmes GTB</li>
+                        <li>Échange de données entre automates différents</li>
+                        <li>Utilisation sur un même bâtiment avec plusieurs environnements</li>
+                        <li>Approche orientée cohérence d’exploitation et supervision</li>
+                      </ul>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-api">
+                      <h3>API</h3>
+                      <p>
+                        Expérience de l’intégration de produits via API, principalement
+                        dans l’environnement Loxone. Cette logique me permet également
+                        de rendre accessibles des informations ou des fonctions Loxone
+                        à d’autres plateformes, dans une optique de supervision, de
+                        pilotage ou d’ouverture vers des systèmes tiers.
+                      </p>
+                      <ul class="tech-points">
+                        <li>Intégration de produits via API</li>
+                        <li>Expérience principalement acquise avec Loxone</li>
+                        <li>Ouverture des données et fonctions vers des systèmes tiers</li>
+                        <li>Usage pour supervision ou pilotage externe</li>
+                      </ul>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-lora">
+                      <h3>LoRa</h3>
+                      <p>
+                        Utilisation de produits LoRa à travers des passerelles capables
+                        de récupérer ces équipements puis de les rendre exploitables dans
+                        des protocoles plus classiques, comme Modbus ou BACnet. L’intérêt
+                        est alors d’intégrer des capteurs ou équipements LoRa dans une
+                        logique GTB plus globale et plus lisible.
+                      </p>
+                      <ul class="tech-points">
+                        <li>Usage via passerelles de conversion</li>
+                        <li>Récupération d’équipements et capteurs LoRa</li>
+                        <li>Exposition dans des protocoles plus classiques</li>
+                        <li>Intégration dans une logique GTB globale</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
@@ -331,6 +444,24 @@
         button.classList.add("active");
         document.getElementById(`system-${system}`).classList.add("active");
         document.getElementById(`system-copy-${system}`).classList.add("active");
+      });
+    });
+
+    const protocolButtons = document.querySelectorAll(".protocol-button");
+    const protocolCards = document.querySelectorAll(".protocol-card");
+    const protocolCopies = document.querySelectorAll(".protocol-copy-item");
+
+    protocolButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const protocol = button.dataset.protocol;
+
+        protocolButtons.forEach((item) => item.classList.remove("active"));
+        protocolCards.forEach((item) => item.classList.remove("active"));
+        protocolCopies.forEach((item) => item.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(`protocol-${protocol}`).classList.add("active");
+        document.getElementById(`protocol-copy-${protocol}`).classList.add("active");
       });
     });
   </script>

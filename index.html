@@ -13,13 +13,14 @@
 <body data-theme="dark">
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="site-brand">Adrien Conseil</a>
+      <a href="index.html#top" class="site-brand">Adrien Conseil</a>
 
       <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#profil" class="nav-link active">Profil</a>
-        <a href="#missions" class="nav-link">Missions</a>
-        <a href="#competences" class="nav-link">Compétences</a>
-        <a href="test.html" class="nav-link">Test</a>
+        <a href="index.html#profil" class="nav-link">Profil</a>
+        <a href="index.html#missions" class="nav-link">Savoir-faire</a>
+        <a href="index.html#competences" class="nav-link">Compétences</a>
+        <a href="realisations.html" class="nav-link active">Réalisations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <button
@@ -56,7 +57,10 @@
 
         <div class="hero-actions">
           <a href="#profil" class="btn">Découvrir mon profil</a>
-          <a href="test.html" class="btn btn-secondary">Page test</a>
+          <a href="adrien_conseil_cv_dark_v3.pdf" class="btn btn-secondary" download>
+            Télécharger le CV
+          </a>
+          <a href="#competences" class="btn btn-secondary">Voir mes compétences</a>
         </div>
       </div>
     </section>
@@ -98,18 +102,20 @@
     <section id="missions" class="section section-alt">
       <div class="container">
         <div class="section-heading">
-          <p class="section-kicker">Missions réalisables</p>
-          <h2>Ce que je peux prendre en charge</h2>
+          <p class="section-kicker">Savoir-faire</p>
+          <h2>Missions que je suis capable de réaliser</h2>
           <p class="section-intro">
-            Cette section a vocation à évoluer ensuite vers une vraie frise sticky
-            plus graphique.
+            Une vision structurée des différentes étapes sur lesquelles je peux
+            intervenir, de l’analyse du besoin à la documentation finale, avec
+            une attention portée à la cohérence technique, à l’intégration et à
+            l’exploitation.
           </p>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-step">01</div>
-            <div class="timeline-content">
+        <div class="timeline-v2">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">01</div>
+            <div class="timeline-card-v2">
               <h3>Étude et analyse</h3>
               <p>
                 Lecture de CCTP, analyse des besoins, compréhension de
@@ -119,9 +125,9 @@
             </div>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-step">02</div>
-            <div class="timeline-content">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">02</div>
+            <div class="timeline-card-v2">
               <h3>Définition des solutions</h3>
               <p>
                 Choix et structuration des solutions techniques selon le contexte du
@@ -131,9 +137,9 @@
             </div>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-step">03</div>
-            <div class="timeline-content">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">03</div>
+            <div class="timeline-card-v2">
               <h3>Conception et préparation</h3>
               <p>
                 Réalisation de devis, schémas, préparation technique, câblage de
@@ -142,9 +148,9 @@
             </div>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-step">04</div>
-            <div class="timeline-content">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">04</div>
+            <div class="timeline-card-v2">
               <h3>Coordination et déploiement</h3>
               <p>
                 Implantation, coordination avec les autres intervenants, suivi de la
@@ -154,9 +160,9 @@
             </div>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-step">05</div>
-            <div class="timeline-content">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">05</div>
+            <div class="timeline-card-v2">
               <h3>Programmation et mise en service</h3>
               <p>
                 Programmation, reprise d’existant, intégration des équipements
@@ -166,9 +172,9 @@
             </div>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-step">06</div>
-            <div class="timeline-content">
+          <article class="timeline-item-v2">
+            <div class="timeline-step-v2">06</div>
+            <div class="timeline-card-v2">
               <h3>Finalisation et documentation</h3>
               <p>
                 Production de documentation technique, DOE, manuels utilisateurs et
@@ -191,65 +197,239 @@
 
     <section id="competences" class="section">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading section-heading-wide">
           <p class="section-kicker">Compétences techniques</p>
           <h2>Systèmes, environnements et protocoles</h2>
+          <p class="section-intro">
+            Une présentation structurée des environnements maîtrisés et des
+            protocoles utilisés dans une logique d’intégration, d’interopérabilité
+            et d’exploitation.
+          </p>
         </div>
 
-        <div class="cards-grid">
-          <article class="skill-card">
-            <h3>Systèmes et environnements</h3>
+        <div class="tech-switcher">
+          <div class="tech-tabs" role="tablist" aria-label="Catégories techniques">
+            <button class="tech-tab active" data-target="slide-systemes" type="button">
+              Systèmes
+            </button>
+            <button class="tech-tab" data-target="slide-protocoles" type="button">
+              Protocoles
+            </button>
+          </div>
 
-            <ul class="tag-list">
-              <li>Loxone</li>
-              <li>KNX</li>
-              <li>WIT</li>
-            </ul>
+          <div class="tech-panels">
+            <article class="tech-panel active" id="slide-systemes">
+              <div class="system-switcher">
+                <div class="system-buttons" role="tablist" aria-label="Sélection d’un système">
+                  <button class="system-button active" type="button" data-system="loxone">
+                    Loxone
+                  </button>
+                  <button class="system-button" type="button" data-system="wit">
+                    WIT
+                  </button>
+                </div>
 
-            <p>
-              Très bonne maîtrise de l’environnement Loxone et de ses produits,
-              bonne autonomie sur KNX avec capacité à analyser et reprendre une
-              installation existante, et maîtrise de l’environnement WIT.
-            </p>
-          </article>
+                <div class="system-display">
+                  <div class="system-visual">
+                    <div class="system-card active" id="system-loxone">
+                      <div class="system-logo-stage loxone-stage">
+                        <div class="brand-logo-text">LOXONE</div>
+                      </div>
+                    </div>
 
-          <article class="skill-card">
-            <h3>Protocoles et communication</h3>
+                    <div class="system-card" id="system-wit">
+                      <div class="system-logo-stage wit-stage">
+                        <img
+                          src="https://www.wit.fr/wp-content/uploads/2021/03/LOGO_WIT_menu.png"
+                          alt="Logo WIT"
+                          class="brand-logo-image wit-logo-image"
+                        />
+                      </div>
+                    </div>
+                  </div>
 
-            <ul class="tag-list">
-              <li>Modbus RTU / TCP</li>
-              <li>BACnet</li>
-              <li>LoRa</li>
-              <li>Réseau IP</li>
-              <li>Masques</li>
-              <li>Sous-réseaux</li>
-              <li>NAT</li>
-            </ul>
+                  <div class="system-copy">
+                    <div class="system-copy-item active" id="system-copy-loxone">
+                      <h3>Loxone</h3>
+                      <p>
+                        Très bonne maîtrise de l’environnement Loxone et de ses produits,
+                        avec une bonne connaissance de la logique de programmation, des
+                        équipements et des usages associés à l’intégration domotique et GTB.
+                      </p>
+                      <ul class="tech-points">
+                        <li>Très bonne connaissance des produits</li>
+                        <li>Très bonne maîtrise de l’environnement de programmation</li>
+                        <li>Approche orientée intégration, logique d’usage et cohérence d’ensemble</li>
+                      </ul>
+                    </div>
 
-            <p>
-              Bonne compréhension des échanges entre équipements communicants et des
-              bases réseau utiles à l’intégration, à la mise en service et au
-              diagnostic.
-            </p>
-          </article>
+                    <div class="system-copy-item" id="system-copy-wit">
+                      <h3>WIT</h3>
+                      <p>
+                        Maîtrise de l’environnement WIT sur la partie synoptiques, et non
+                        Synapps. Je sais mener un projet de A à Z avec une approche claire,
+                        structurée et documentée, en développant des solutions faciles à
+                        appréhender, organisées et pensées avec une vraie logique de
+                        maintenabilité.
+                      </p>
+                      <ul class="tech-points">
+                        <li>Pas Synapps ; donc synoptiques</li>
+                        <li>Réalisation de projets WIT de A à Z</li>
+                        <li>Organisation claire et structurée du projet</li>
+                        <li>Documentation pensée pour faciliter la prise en main</li>
+                        <li>Développement orienté maintenabilité</li>
+                        <li>Livrables lisibles, cohérents et faciles à reprendre</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tech-panel" id="slide-protocoles">
+              <div class="protocol-switcher">
+                <div class="protocol-buttons" role="tablist" aria-label="Sélection d’un protocole">
+                  <button class="protocol-button active" type="button" data-protocol="knx">
+                    KNX
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="modbus">
+                    Modbus
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="bacnet">
+                    BACnet
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="api">
+                    API
+                  </button>
+                  <button class="protocol-button" type="button" data-protocol="lora">
+                    LoRa
+                  </button>
+                </div>
+
+                <div class="protocol-display">
+                  <div class="protocol-visual">
+                    <div class="protocol-card active" id="protocol-knx">
+                      <div class="protocol-logo-stage knx-stage">
+                        <div class="brand-logo-text brand-logo-knx">KNX</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-modbus">
+                      <div class="protocol-logo-stage modbus-stage">
+                        <div class="brand-logo-text brand-logo-modbus">MODBUS</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-bacnet">
+                      <div class="protocol-logo-stage bacnet-stage">
+                        <div class="brand-logo-text brand-logo-bacnet">BACnet</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-api">
+                      <div class="protocol-logo-stage api-stage">
+                        <div class="brand-logo-text brand-logo-api">API</div>
+                      </div>
+                    </div>
+
+                    <div class="protocol-card" id="protocol-lora">
+                      <div class="protocol-logo-stage lora-stage">
+                        <div class="brand-logo-text brand-logo-lora">LoRa</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="protocol-copy">
+                    <div class="protocol-copy-item active" id="protocol-copy-knx">
+                      <h3>KNX</h3>
+                      <p>
+                        Bonne maîtrise de KNX, aussi bien pour analyser et reprendre une
+                        installation existante que pour concevoir et dimensionner une
+                        installation de zéro. Je suis à l’aise sur la programmation
+                        d’interfaces, d’actionneurs, de modules de pilotage de climatisation
+                        ou de ventilo-convecteurs, ainsi que sur l’intégration d’écrans KNX.
+                        Je sais également faire communiquer plusieurs systèmes KNX
+                        indépendants, notamment via VLAN, et intégrer des installations KNX
+                        dans des outils de supervision.
+                      </p>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-modbus">
+                      <h3>Modbus RTU / TCP</h3>
+                      <p>
+                        J’utilise Modbus RTU et TCP pour intégrer des équipements
+                        techniques de terrain dans une logique GTB claire et
+                        exploitable. C’est un protocole que je mobilise sur des
+                        sujets très variés, notamment en CVC, en comptage et sur des
+                        équipements liés à la production d’énergie, avec une
+                        attention portée à la lisibilité des échanges et à la
+                        qualité d’intégration.
+                      </p>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-bacnet">
+                      <h3>BACnet</h3>
+                      <p>
+                        J’utilise BACnet dans une logique d’interopérabilité entre
+                        automates et systèmes GTB. Je m’en suis notamment servi pour
+                        mettre en place de l’échange de données entre deux automates
+                        GTB différents sur un même bâtiment, dans une approche
+                        orientée cohérence fonctionnelle, continuité d’exploitation
+                        et supervision partagée.
+                      </p>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-api">
+                      <h3>API</h3>
+                      <p>
+                        J’ai une expérience de l’intégration de produits via API,
+                        principalement dans l’environnement Loxone. Cette approche me
+                        permet également de rendre accessibles des informations ou des
+                        fonctions Loxone à d’autres plateformes, dans une optique de
+                        supervision, de pilotage ou d’ouverture vers des systèmes
+                        tiers.
+                      </p>
+                    </div>
+
+                    <div class="protocol-copy-item" id="protocol-copy-lora">
+                      <h3>LoRa</h3>
+                      <p>
+                        J’utilise des produits LoRa à travers des passerelles qui
+                        récupèrent ces équipements puis les rendent exploitables dans
+                        des protocoles plus classiques, comme Modbus ou BACnet.
+                        L’intérêt est alors d’intégrer des capteurs ou équipements
+                        LoRa dans une logique GTB plus globale, plus lisible et plus
+                        facilement exploitable.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="container footer-inner footer-inner-light">
       <div class="footer-text">
         <h2>Adrien Conseil</h2>
         <p>Intégrateur GTB, domotique et systèmes communicants</p>
       </div>
 
       <div class="footer-links">
-        <a href="#" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:ton-email@example.com">Email</a>
-        <a href="tel:+33000000000">Téléphone</a>
-        <span>Ville, Département</span>
+        <a href="adrien_conseil_cv_dark_v3.pdf" download>CV PDF</a>
+        <a href="contact.html">Contact</a>
+        <a href="#top">Retour en haut</a>
+        <a
+          href="https://www.linkedin.com/in/adrien-conseil-538101113/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
       </div>
     </div>
   </footer>
@@ -262,7 +442,9 @@
     function applyTheme(theme) {
       body.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
-      toggleText.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
+      if (toggleText) {
+        toggleText.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
+      }
     }
 
     const savedTheme = localStorage.getItem("theme");
@@ -272,9 +454,62 @@
       applyTheme("dark");
     }
 
-    toggle.addEventListener("click", () => {
-      const currentTheme = body.getAttribute("data-theme");
-      applyTheme(currentTheme === "dark" ? "light" : "dark");
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const currentTheme = body.getAttribute("data-theme");
+        applyTheme(currentTheme === "dark" ? "light" : "dark");
+      });
+    }
+
+    const tabs = document.querySelectorAll(".tech-tab");
+    const panels = document.querySelectorAll(".tech-panel");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach((item) => item.classList.remove("active"));
+        panels.forEach((panel) => panel.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+
+    const systemButtons = document.querySelectorAll(".system-button");
+    const systemCards = document.querySelectorAll(".system-card");
+    const systemCopies = document.querySelectorAll(".system-copy-item");
+
+    systemButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const system = button.dataset.system;
+
+        systemButtons.forEach((item) => item.classList.remove("active"));
+        systemCards.forEach((item) => item.classList.remove("active"));
+        systemCopies.forEach((item) => item.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(`system-${system}`).classList.add("active");
+        document.getElementById(`system-copy-${system}`).classList.add("active");
+      });
+    });
+
+    const protocolButtons = document.querySelectorAll(".protocol-button");
+    const protocolCards = document.querySelectorAll(".protocol-card");
+    const protocolCopies = document.querySelectorAll(".protocol-copy-item");
+
+    protocolButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const protocol = button.dataset.protocol;
+
+        protocolButtons.forEach((item) => item.classList.remove("active"));
+        protocolCards.forEach((item) => item.classList.remove("active"));
+        protocolCopies.forEach((item) => item.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(`protocol-${protocol}`).classList.add("active");
+        document.getElementById(`protocol-copy-${protocol}`).classList.add("active");
+      });
     });
   </script>
 </body>

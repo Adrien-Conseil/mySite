@@ -1,0 +1,143 @@
+.hero-realisations {
+  min-height: 62vh;
+}
+
+.realisations-intro-section {
+  padding-top: 24px;
+}
+
+.realisations-note,
+.realisations-cta,
+.project-card {
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.realisations-note {
+  padding: 30px;
+  max-width: 920px;
+}
+
+.realisations-note-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.realisations-note h2,
+.realisations-cta h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.realisations-note p,
+.realisations-cta p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.realisations-grid-section {
+  padding-top: 56px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.project-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.project-visual {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  background: #050505;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  padding: 26px 26px 28px;
+}
+
+.project-label {
+  margin: 0 0 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: 0.76rem;
+}
+
+.project-content h2 {
+  margin: 0 0 16px;
+  font-size: 1.45rem;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.project-content p {
+  margin: 0 0 14px;
+  color: var(--text-soft);
+}
+
+.project-content p:last-child {
+  margin-bottom: 0;
+}
+
+.project-techline {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+  color: var(--text);
+}
+
+.project-techline strong {
+  color: var(--text);
+}
+
+.realisations-cta-section {
+  padding-top: 56px;
+}
+
+.realisations-cta {
+  padding: 32px;
+  max-width: 980px;
+}
+
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .realisations-note,
+  .realisations-cta,
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-content h2 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Adrien Conseil</title>
+  <meta
+    name="description"
+    content="Page de contact d’Adrien Conseil — Intégrateur GTB, domotique et systèmes communicants."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#top" class="site-brand">Adrien Conseil</a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html#profil" class="nav-link">Profil</a>
+        <a href="index.html#missions" class="nav-link">Savoir-faire</a>
+        <a href="index.html#competences" class="nav-link">Compétences</a>
+        <a href="realisations.html" class="nav-link active">Réalisations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Changer de thème"
+      >
+        <span class="theme-toggle-dot"></span>
+        <span class="theme-toggle-text">Mode clair</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section hero hero-contact">
+      <div class="container hero-inner">
+        <p class="eyebrow">Contact</p>
+        <h1>Échanger autour d’un projet, d’une opportunité ou d’un besoin technique</h1>
+        <p class="hero-text">
+          Vous pouvez me contacter pour échanger autour d’une opportunité, d’un projet,
+          d’un besoin d’intégration ou simplement pour prendre contact. La page
+          regroupe les coordonnées directes ainsi qu’un formulaire simple.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-column">
+          <div class="section-heading">
+            <p class="section-kicker">Coordonnées</p>
+            <h2>Contact direct</h2>
+            <p class="section-intro">
+              Quelques moyens simples pour me joindre ou me retrouver en ligne.
+            </p>
+          </div>
+
+          <div class="contact-cards">
+            <article class="contact-card">
+              <h3>Email</h3>
+              <p>Pour un premier échange, une prise de contact ou un besoin technique.</p>
+              <a href="mailto:adri1.conseil@gmail.com">adri1.conseil@gmail.com</a>
+            </article>
+
+            <article class="contact-card">
+              <h3>Téléphone</h3>
+              <p>Non disponible pour l’instant.</p>
+              <a href="tel:+33000000000">+33 0 00 00 00 00</a>
+            </article>
+
+            <article class="contact-card">
+              <h3>LinkedIn</h3>
+              <p>Pour le réseau professionnel, les échanges et la prise de contact.</p>
+              <a
+                href="https://www.linkedin.com/in/adrien-conseil-538101113/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir le profil LinkedIn
+              </a>
+            </article>
+
+            <article class="contact-card">
+              <h3>Localisation</h3>
+              <p>Limoux / Aude</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Limoux%2C+Aude"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir sur Google Maps
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="contact-column">
+          <div class="section-heading">
+            <p class="section-kicker">Formulaire</p>
+            <h2>Envoyer un message</h2>
+            <p class="section-intro">
+              Formulaire court, pensé pour un premier contact simple et lisible.
+            </p>
+          </div>
+
+          <div class="contact-form-card">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="contact-form"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="form-hidden">
+                <label>
+                  Ne pas remplir ce champ
+                  <input name="bot-field" type="text" />
+                </label>
+              </p>
+
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="name">Nom</label>
+                  <input id="name" name="name" type="text" placeholder="Nom" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="adresse@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="subject">Sujet</label>
+                <input id="subject" name="subject" type="text" placeholder="Objet du message" />
+              </div>
+
+              <div class="form-field">
+                <label for="reason">Motif</label>
+                <select id="reason" name="reason">
+                  <option value="">Choisir une option</option>
+                  <option value="opportunite">Opportunité</option>
+                  <option value="projet">Projet</option>
+                  <option value="besoin-technique">Besoin technique</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="7"
+                  placeholder="Décris brièvement l'objet de la demande"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn">Envoyer le message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner footer-inner-light">
+      <div class="footer-text">
+        <h2>Adrien Conseil</h2>
+        <p>Intégrateur GTB, domotique et systèmes communicants</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="#top">Retour en haut</a>
+        <a
+          href="https://www.linkedin.com/in/adrien-conseil-538101113/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+    const toggleText = document.querySelector(".theme-toggle-text");
+
+    function applyTheme(theme) {
+      body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      if (toggleText) {
+        toggleText.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
+      }
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme("dark");
+    }
+
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const currentTheme = body.getAttribute("data-theme");
+        applyTheme(currentTheme === "dark" ? "light" : "dark");
+      });
+    }
+  </script>
+</body>
+</html>

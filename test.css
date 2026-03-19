@@ -123,54 +123,14 @@
 
 .tech-panel {
   display: none;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 28px;
   padding: 28px;
-  align-items: stretch;
 }
 
 .tech-panel.active {
-  display: grid;
+  display: block;
 }
 
-.tech-panel-visual {
-  min-height: 280px;
-  border-radius: 22px;
-  border: 1px solid var(--border-soft);
-  background:
-    radial-gradient(circle at top right, var(--accent-soft), transparent 42%),
-    linear-gradient(180deg, var(--bg), var(--bg-card));
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 14px;
-  padding: 24px;
-}
-
-.logo-chip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 110px;
-  min-height: 52px;
-  padding: 0 16px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
-  color: var(--text);
-  font-weight: 700;
-}
-
-.tech-panel-copy h3 {
-  margin: 0 0 14px;
-  font-size: 1.35rem;
-}
-
-.tech-panel-copy p {
-  margin: 0 0 18px;
-  color: var(--text-soft);
-}
-
+/* Base texte / listes */
 .tech-points {
   margin: 0;
   padding-left: 18px;
@@ -181,6 +141,7 @@
   margin-top: 8px;
 }
 
+/* SYSTEMES */
 .system-switcher {
   display: grid;
   gap: 18px;
@@ -220,14 +181,14 @@
 
 .system-display {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(460px, 1.25fr);
   gap: 24px;
   align-items: stretch;
 }
 
 .system-visual {
   position: relative;
-  min-height: 320px;
+  min-height: 360px;
 }
 
 .system-card {
@@ -240,18 +201,34 @@
 }
 
 .system-logo-stage {
-  min-height: 320px;
+  min-height: 360px;
   height: 100%;
   border-radius: 24px;
   border: 1px solid var(--border-soft);
-  background:
-    radial-gradient(circle at top right, var(--accent-soft), transparent 42%),
-    linear-gradient(180deg, var(--bg), var(--bg-card));
   box-shadow: var(--shadow-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
+  overflow: hidden;
+}
+
+.loxone-stage {
+  background:
+    radial-gradient(circle at top right, rgba(118, 255, 77, 0.16), transparent 42%),
+    linear-gradient(180deg, #030603, #071007);
+}
+
+.knx-stage {
+  background:
+    radial-gradient(circle at top right, rgba(41, 174, 255, 0.22), transparent 42%),
+    linear-gradient(180deg, #02060b, #07111b);
+}
+
+.wit-stage {
+  background:
+    radial-gradient(circle at top right, rgba(0, 180, 255, 0.18), transparent 42%),
+    linear-gradient(180deg, #02060a, #071019);
 }
 
 .brand-logo-text {
@@ -266,25 +243,40 @@
   text-shadow: 0 0 24px rgba(118, 255, 77, 0.16);
 }
 
-.knx-stage .brand-logo-text {
-  color: #1aa7ec;
-  text-shadow: 0 0 24px rgba(26, 167, 236, 0.16);
+.brand-logo-knx {
+  display: inline-block;
+  font-family: "Arial Black", "Inter", Arial, sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  transform: skew(-12deg);
+  background: linear-gradient(135deg, #46d7ff 0%, #1da1ff 55%, #7bbcff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 24px rgba(29, 161, 255, 0.18);
 }
 
-.wit-stage .brand-logo-text {
-  color: #ffb84d;
-  text-shadow: 0 0 24px rgba(255, 184, 77, 0.16);
+.brand-logo-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wit-logo-image {
+  width: min(280px, 82%);
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
 }
 
 .system-copy {
   position: relative;
-  min-height: 320px;
+  min-height: 360px;
 }
 
 .system-copy-item {
   display: none;
   height: 100%;
-  padding: 28px;
+  padding: 30px 32px;
   border-radius: 24px;
   background: linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
   border: 1px solid var(--border-soft);
@@ -296,30 +288,196 @@
 }
 
 .system-copy-item h3 {
-  margin: 0 0 14px;
-  font-size: 1.35rem;
+  margin: 0 0 16px;
+  font-size: 1.5rem;
 }
 
 .system-copy-item p {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   color: var(--text-soft);
+  max-width: 62ch;
 }
 
-@media (max-width: 900px) {
+.system-copy-item .tech-points {
+  max-width: 62ch;
+}
+
+/* PROTOCOLES */
+.protocol-switcher {
+  display: grid;
+  gap: 18px;
+}
+
+.protocol-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.protocol-button {
+  border: 1px solid var(--border-soft);
+  background: var(--bg);
+  color: var(--text-soft);
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.protocol-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.protocol-button.active {
+  background: var(--accent-soft);
+  border-color: var(--border);
+  color: var(--accent);
+}
+
+.protocol-display {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(460px, 1.25fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.protocol-visual {
+  position: relative;
+  min-height: 360px;
+}
+
+.protocol-card {
+  display: none;
+  height: 100%;
+}
+
+.protocol-card.active {
+  display: block;
+}
+
+.protocol-logo-stage {
+  min-height: 360px;
+  height: 100%;
+  border-radius: 24px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.modbus-stage {
+  background:
+    radial-gradient(circle at top right, rgba(255, 146, 43, 0.20), transparent 42%),
+    linear-gradient(180deg, #0b0502, #1a0e06);
+}
+
+.bacnet-stage {
+  background:
+    radial-gradient(circle at top right, rgba(122, 255, 87, 0.16), transparent 42%),
+    linear-gradient(180deg, #030603, #081108);
+}
+
+.api-stage {
+  background:
+    radial-gradient(circle at top right, rgba(155, 122, 255, 0.18), transparent 42%),
+    linear-gradient(180deg, #05030b, #0f0919);
+}
+
+.lora-stage {
+  background:
+    radial-gradient(circle at top right, rgba(43, 197, 255, 0.20), transparent 42%),
+    linear-gradient(180deg, #02070b, #07131c);
+}
+
+.brand-logo-modbus {
+  color: #ff9a3b;
+  text-shadow: 0 0 24px rgba(255, 154, 59, 0.18);
+}
+
+.brand-logo-bacnet {
+  color: #7aff57;
+  text-shadow: 0 0 24px rgba(122, 255, 87, 0.16);
+}
+
+.brand-logo-api {
+  color: #c6a6ff;
+  text-shadow: 0 0 24px rgba(198, 166, 255, 0.18);
+}
+
+.brand-logo-lora {
+  color: #5fd9ff;
+  text-shadow: 0 0 24px rgba(95, 217, 255, 0.18);
+}
+
+.protocol-copy {
+  position: relative;
+  min-height: 360px;
+}
+
+.protocol-copy-item {
+  display: none;
+  height: 100%;
+  padding: 30px 32px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.protocol-copy-item.active {
+  display: block;
+}
+
+.protocol-copy-item h3 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+.protocol-copy-item p {
+  margin: 0 0 20px;
+  color: var(--text-soft);
+  max-width: 62ch;
+}
+
+.protocol-copy-item .tech-points {
+  max-width: 62ch;
+}
+
+@media (max-width: 1000px) {
   .cards-grid-amo,
-  .tech-panel,
-  .system-display {
+  .system-display,
+  .protocol-display {
     grid-template-columns: 1fr;
   }
 
   .system-visual,
-  .system-copy {
+  .system-copy,
+  .protocol-visual,
+  .protocol-copy {
     min-height: auto;
   }
 
   .system-logo-stage,
-  .system-copy-item {
-    min-height: 240px;
+  .system-copy-item,
+  .protocol-logo-stage,
+  .protocol-copy-item {
+    min-height: 260px;
+  }
+
+  .system-copy-item p,
+  .system-copy-item .tech-points,
+  .protocol-copy-item p,
+  .protocol-copy-item .tech-points {
+    max-width: none;
   }
 }
 
@@ -342,14 +500,17 @@
 
   .timeline-card-v2,
   .system-copy-item,
-  .system-logo-stage {
+  .system-logo-stage,
+  .protocol-copy-item,
+  .protocol-logo-stage {
     min-height: auto;
     padding: 20px;
     border-radius: 20px;
   }
 
   .tech-tabs,
-  .system-buttons {
+  .system-buttons,
+  .protocol-buttons {
     flex-wrap: wrap;
   }
 
@@ -357,12 +518,11 @@
     padding: 20px;
   }
 
-  .tech-panel-visual {
-    min-height: 200px;
-    padding: 18px;
-  }
-
   .brand-logo-text {
     font-size: 2rem;
+  }
+
+  .wit-logo-image {
+    width: min(220px, 85%);
   }
 }
